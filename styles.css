@@ -1,1 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, #ddd6f3 0%, #faaca8);
+}
+.container {
+  margin: 10vh auto;
+  max-width: 500px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f38a84de;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px black;
+}
+header {
+  margin-bottom: 10px;
+  font-size: 5vh;
+}
+.inputText {
+  margin-bottom: 10px;
+  outline: none;
+}
+.inputText input {
+  margin: 0 8px;
+  height: 100%;
+  width: 83%;
+  font-size: 18px;
+  padding: 5px 0 5px 5px;
+  outline: none;
+}
+.inputText button {
+  height: 100%;
+  width: 10%;
+  padding: 6.5px;
+  border-radius: 6px;
+  border:1px solid black;
+  background-color: rgb(247, 40, 92);
+  box-shadow: 2px 2px 2px rgb(36, 31, 33);
+}
+ul {
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: maroon;
+}
+ul li {
+  padding-left: 5px;
+  margin: 8px;
+  background-color:#ffb5b1de ;
+  line-height: 30px;
+  list-style-type: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+ul li span {
+  position: absolute;
+  right: -40px;
+  width: 40px;
+  background-color: rgb(243, 11, 11);
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+ul li:hover span {
+  right: 0px;
+}
+.footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 5vh;
+}
+.footer button{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(247, 40, 92);
+  box-shadow: 2px 2px 2px rgb(36, 31, 33);
+
+}
 
