@@ -1,61 +1,65 @@
-const inputBox = document.querySelector(".inputText input");
-const addBtn = document.querySelector(".inputText button");
-const todoList = document.querySelector(".todoList");
-clearAll();
-
-
-inputBox.onkeyup = ()=>{
-      let userEnteredValue = inputBox.value;
-      if(userEnteredValue.trim() != 0){ 
-        addBtn.classList.add("active");
-      }else{
-        addBtn.classList.remove("active");
-      }
-    }
-
-addBtn.onclick = ()=>{
-      let userData = inputBox.value;
-      let getLocalStorage = localStorage.getItem("New todo");
-      if(getLocalStorage == null){
-          listArr = [];  
-      }
-      else{
-            listArr=JSON.parse(getLocalStorage);
-      }
-      listArr.push(userData);
-      localStorage.setItem("New todo", JSON.stringify(listArr));
-    showTasks();
+function insert(num){  
+      document.form.textview.value = document.form.textview.value+num;
 }
 
-function showTasks(){
-      let getLocalStorage = localStorage.getItem("New todo");
-      if(getLocalStorage === null){
-          listArray = [];  
+function equal(){
+      let eq =eval(document.form.textview.value);
+      if(eq==undefined){
+            eq=0;
       }
-      else{
-            listArray =JSON.parse(getLocalStorage);
-      }
-      let newLiTag ="";
-      listArray.forEach((element, index) => {
-            newLiTag =`<li> ${element} <span onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`+newLiTag;
-      });
-      let arrLen = listArray.length;
-      document.querySelector(".remaininginfo").innerHTML=arrLen;
-
-      todoList.innerHTML = newLiTag;
-      inputBox.value="";
+      document.form.textview.value = eq;
 }
-
-
-function deleteTask(index){
-      let getLocalStorage = localStorage.getItem("New todo");
-      listArray=JSON.parse(getLocalStorage);
-      listArray.splice(index,1);
-      localStorage.setItem("New todo", JSON.stringify(listArray));
-      showTasks();
+function clean(){
+      document.form.textview.value ="";
 }
-function clearAll(){
-      localStorage.clear();
-      showTasks();
+function back(){
+      let string = document.form.textview.value ;
+      document.form.textview.value = string.substring(0,string.length-1);
 }
-
+function percent(){
+      let num = document.form.textview.value;
+       document.form.textview.value= num/100;
+}
+function sqrt(){
+      let num = document.form.textview.value;
+      num=Math.sqrt(num);
+      document.form.textview.value=num;
+}
+function square(){
+      let num = document.form.textview.value;
+      num= num*num;
+      document.form.textview.value=num;
+}
+function square(){
+      let num = document.form.textview.value;
+      num= num*num*num;
+      document.form.textview.value=num;
+}
+function fact(){
+      let num = document.form.textview.value;
+      let answer = 1;
+     for(let i =1; i<=num; i++){
+           answer*=i;
+     }
+     document.form.textview.value=answer;
+}
+function sin(){
+      let num = document.form.textview.value;
+      document.form.textview.value=Math.sin(num);
+}
+function cos(){
+      let num = document.form.textview.value;
+      document.form.textview.value=Math.cos(num);
+}
+function tan(){
+      let num = document.form.textview.value;
+      document.form.textview.value=Math.tan(num);
+}
+function pi(){
+      let num = document.form.textview.value;
+      document.form.textview.value=num*3.14159265359;
+}
+function e(){
+      let num = document.form.textview.value;
+      document.form.textview.value=num*2.71828182846;
+}
