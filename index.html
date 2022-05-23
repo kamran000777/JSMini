@@ -1,31 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Todo-list</title>
-      <link rel="stylesheet" href="styles.css">
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
-<body>
-      <div class="container">
-            <header>Todo-list</header>
-            <div class="inputText">
-                  <input type="text" placeholder="Add new todo">
-                  <button class="btn">+</button>
-            </div>
-            <hr>
-              <ul class="todoList">
-                  <!--li-->
-              </ul>
-            <div class="footer">
-                  <p>Task pending:-&nbsp;<span class="remaininginfo">0
-                  </span>
-                  </p>
-                  <button onclick="clearAll()">Clear All</button>
-            </div>
-      </div>
-      <script src="App.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="cal">
+      <form name="form">
+        <input class="txt" name="textview"/>
+      </form>
+      <table>
+
+
+        <tr>
+          <td>
+            <input class="btn sym" type="button" value="CE" onclick="back()" />
+          </td>
+          <td>
+            <input class="btn sym"  type="button" value= x&#33; onclick="fact()" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="(" onclick="insert('(')" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value=")" onclick="insert(')')" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="%" onclick="percent()" />
+          </td>
+          <td>
+            <input class="btn" id="clr" type="button" value="AC" onclick="clean()" />
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input class="btn sym" type="button" value="sin" onclick="sin()" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value=	"&#960;" onclick="pi()" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="7" onclick="insert(7)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="8" onclick="insert(8)" />
+          </td>
+          <td>
+            <input type="button" class="btn" value="9" onclick="insert(9)" />
+            </td>
+            <td>
+              <input type="button" class="btn sym" value="÷" onclick="insert('/')" />
+            </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input type="button" class="btn sym" value="cos" onclick="cos()" />
+          </td>
+          <td>
+            <input class="btn sym" id="bk" type="button" value="&radic;" onclick="sqrt()" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="4" onclick="insert(4)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="5" onclick="insert(5)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="6" onclick="insert(6)" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="x" onclick="insert('*')" />
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input class="btn sym" type="button" value="tan" onclick="tan()" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="x&sup3;" onclick="square()" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="1" onclick="insert(1)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="2" onclick="insert(2)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="3" onclick="insert(3)" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="-" onclick="insert('-')" />
+           </td>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input class="btn sym" type="button" value="e" onclick="e()" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="x&#178;" onclick="square()" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="0" onclick="insert(0)" />
+          </td>
+          <td>
+            <input class="btn" type="button" value="." onclick="insert('.')" />
+          </td>
+          <td>
+            <input class="btn sym" id="equal" type="button" value="=" onclick="equal()" />
+          </td>
+          <td>
+            <input class="btn sym" type="button" value="+" onclick="insert('+')" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
